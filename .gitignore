@@ -1,3 +1,9 @@
+# Mac/OSX
+.DS_Store
+
+# Windows
+Thumbs.db
+
 # Environments
 .env
 .venv
@@ -7,9 +13,21 @@ ENV/
 env.bak/
 venv.bak/
 
+# pyenv
+.python-version 
+
+# Packaging
+.Python
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+
 # Output data files
-data/audios/
-data/videos
+*.mp4
+*.mp3
 
 # Python cache
 *.pyc

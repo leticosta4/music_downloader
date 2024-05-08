@@ -3,13 +3,16 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.common.by import By
-from webdriver_manager.firefox import GeckoDriverManager
+#adaptar aqui p o navegador que for ser usado talvez dps
+from webdriver_manager.firefox import GeckoDriverManager #firefox
+
 
 #preparando o driver
 def driver_setup():
     options = webdriver.FirefoxOptions()
+    # options = Options()
     options.add_argument("-headless") #dispensando interface grafica
-    d = webdriver.Edge(service=FirefoxService(GeckoDriverManager().install()),options=options) 
+    d = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=options) 
     d.implicitly_wait(3) #tempo de espera antes dos elementos aparecerem
     return d
 

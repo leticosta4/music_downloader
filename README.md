@@ -1,5 +1,5 @@
 # music_downloader
-Um bot que faz o download de músicas (formato mp4) pelo youtube a partir de um arquivo csv
+Um bot que faz o download de músicas pelo youtube a partir de um arquivo csv
 
 ### bibliotecas e módulos utilizados
 - [pytube](https://pytube.io/en/latest/)
@@ -29,4 +29,4 @@ para tal:
       var_regex = re.compile(r"^[\w\$_]+\W")
 
 Essa alteração evitará um erro de identificação do caracter alfanumérico "\w+". E na função do arquivo havia um `'\$O'`, que não seria correspondido.
-De acordo com a especificação da [ECMA](https://262.ecma-international.org/5.1/#sec-7.6), identificadores válidos podem incluir os símbolos `'$'` e `'_'`, além de caracteres alfanuméricos.
+De acordo com a especificação da [ECMA](https://262.ecma-international.org/5.1/#sec-7.6), identificadores válidos podem incluir os símbolos `'$'` e `'_'`, além de outros caracteres alfanuméricos.

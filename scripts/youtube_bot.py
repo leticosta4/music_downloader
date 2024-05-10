@@ -2,16 +2,13 @@
 from pytube import YouTube
 from pytube.exceptions import VideoUnavailable
 import moviepy.editor as mpe
+from scripts.files_config import prepare_directories, deletar_videos
 from scripts.data_extracting import data_extracting
 
-video_output_path = 'data/videos/'
-audio_output_path = 'data/audios/'
-
-#Criando um objeto do youtube com link e acessando o seu audio
 def video_extracting(url, path):
     yt_video = YouTube(str(url))
     title = yt_video.title
-    song_audio = yt_video.streams.get_highest_resolution() #acessando stream específica de audio 
+    song_audio = yt_video.streams.get_highest_resolution() 
 
     print(f"video title: {title}")
     print(f"streams de audio mp4: {song_audio}")
@@ -26,13 +23,6 @@ def coverting_to_audio_files(name, input_path, output_path):
     video.audio.write_audiofile(f"{output_path}{name}.mp3")
             
 
-
-series = data_extracting()
-for song_url in series:
-     audio_title = video_extracting(song_url, video_output_path)
-     coverting_to_audio_files(audio_title, video_output_path, audio_output_path)
-
-
 """
 streams information:
 - itag: identificador de tag, referente a qualidade e tipo de stream
@@ -41,13 +31,3 @@ streams information:
 - acodec: codificador de audio usado
 - progressive: progressive é quando inclui audio e video na mesma stream (bool)
 """
-    
-"""
-Exemplos de outras musicas para adicionar no csv:
-Shut up my moms calling, Hotel Ugly
-Numb,Men I Trust
-Sweet,Lana Del Rey
-"""
-
-   
-            

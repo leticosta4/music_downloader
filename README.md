@@ -14,16 +14,16 @@ Um bot que faz o download de músicas pelo youtube a partir de um arquivo csv
     - python3 -m venv "nome do ambiente virtual"
 
  - Para ativar o ambiente virtual:
-   - Linux:      source "nome do ambiente virtual"/bin/activate
-   - Windows:    "nome do ambiente virtual"\Scripts\activate.bat
+   - Linux:      `source "nome do ambiente virtual"/bin/activate`
+   - Windows:    `"nome do ambiente virtual"\Scripts\activate.bat`
 
 
 ### instalando as bibliotecas
 Dentro da pasta do projeto, rodar no terminal:
-    - pip install -r requirements.txt
+     `pip install -r requirements.txt`
 
 ### ALERTA 
-Já com o ambiente virtual ativado, ao se instalar o pytube, na versão 15.0.0, a linha 30 do seu arquivo 'cipher.py' (pasta lib) precisa ser alterada
+Já com o ambiente virtual ativado, ao se instalar o pytube, na versão 15.0.0, a linha 30 do seu arquivo '`cipher.py`' (pasta lib) precisa ser alterada
 para tal:
 
       var_regex = re.compile(r"^[\w\$_]+\W")

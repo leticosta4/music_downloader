@@ -1,6 +1,9 @@
 # music_downloader
 Um bot que faz o download de músicas pelo youtube a partir de um arquivo csv
 
+## IMPORTANTE:
+Bot atualmente em manutenção !! :(
+
 ### bibliotecas e módulos utilizados
 - [pytube](https://pytube.io/en/latest/)
 - [moviepy](https://zulko.github.io/moviepy/)
